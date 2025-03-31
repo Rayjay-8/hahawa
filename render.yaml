@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: waha
+    env: docker
+    plan: free
+    autoDeploy: true
+    healthCheckPath: /health
+    envVars:
+      - key: WAHA_BACKEND
+        value: GOCR
+      - key: WAHA_SERVER_PORT
+        value: 10000
